@@ -1,0 +1,81 @@
+# ============================================================
+# Project: In-Game Mobile Phone Simulator (React Native + Expo)
+# Purpose:
+#   This application is a game that features a simulated mobile
+#   phone interface. The "phone" contains multiple in-game apps 
+#   that users can interact with. Each app should follow a common
+#   UI/UX format and structure.
+#
+#   Data is managed using SQLite (via expo-sqlite), allowing 
+#   persistent storage across apps (e.g. messages, settings, etc.).
+#
+#   This file lists all the dependencies required to build and run 
+#   the project using Expo and React Native.
+# ============================================================
+
+# ----------------------------
+# 🔧 Core Frameworks & Tools
+# ----------------------------
+
+expo                            # Expo SDK for rapid React Native development
+react                           # React core library
+react-native                    # Main React Native mobile development framework
+
+# ----------------------------
+# 📁 SQLite for Local Database
+# ----------------------------
+
+expo-sqlite                     # SQLite plugin for Expo (stores app data locally)
+
+
+# ----------------------------
+# 🎨 UI & Styling
+# ----------------------------
+
+@expo/vector-icons              # Icon library for mobile-like UI/app icons
+react-native-paper              # Material Design UI components for consistent styling
+# use Tailwind-style utility classes instead:
+# nativewind
+
+# ----------------------------
+# 🧠 State Management & Persistence
+# ----------------------------
+
+@react-native-async-storage/async-storage  # (Optional) Persistent key-value storage
+
+# ----------------------------
+# 🧩 Gestures & Animation
+# ----------------------------
+
+react-native-gesture-handler    # Required for navigation gestures
+react-native-reanimated         # Smooth animations & transitions
+
+# ----------------------------
+# 📱 Device & UI Utilities
+# ----------------------------
+
+expo-constants                  # Access device constants (e.g. OS, app version)
+expo-status-bar                 # Customize the in-game phone status bar
+
+# ============================================================
+# Optional (for development only)
+# ============================================================
+
+# @types/react, @types/react-native     # TypeScript support (if using TypeScript)
+# eslint, prettier                      # Linting & formatting tools
+
+ Notes for Development
+
+    Each "app" in the simulated phone (e.g., Messenger, Notes, Gallery) should:
+
+        Use SQLite to read/write its data.
+
+        Follow a shared design template.
+
+        Be modular and easy to add/remove.
+
+    Navigation between apps will be handled using @react-navigation/native.
+
+    Use react-native-paper or nativewind for consistent look & feel across apps.
+
+    Think of each app as a "screen" within a larger in-game phone container.
